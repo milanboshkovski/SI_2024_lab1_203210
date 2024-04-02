@@ -1,0 +1,54 @@
+git init
+git remote add origin https://github.com/milanboshkovski/SI_2024_lab1_203210
+code README.md
+git add README.md
+git commit README.md -m "Initial commit"
+git add -A
+git commit -am "Add starter code"
+git push -u origin master
+git branch bug1
+git branch bug2
+git switch bug1
+code .\SILab1_1.java
+git add -A
+git commit SILab1_1.java -m "Fix condition in filterOddLengthStrings"
+git switch bug2
+code .\SILab1_2.java
+git add -A
+git commit SILab1_2.java -m "Fix condition in makeBigStringFrom"
+git switch bug1
+git code SILab1Main.java
+git add -A
+git commit SILab1Main.java -m "Call method filterOddLengthStrings in main class"
+git switch bug2
+git code SILab1Main.java
+git add -A
+git commit SILab1Main.java -m "Call method makeBigStringFrom in main class"
+git switch master
+git push origin master
+git switch bug1
+git push origin bug1
+git switch bug2
+git push origin bug2
+git switch master
+git merge bug1
+git push origin master
+git switch bug2
+git rebase master
+code SILab1Main.java
+git status
+git add -A
+git rebase --continue
+git switch master
+git merge bug2
+git switch master
+git push origin master
+git switch bug1
+git push origin bug1
+git switch bug2
+git push origin bug2
+git switch master 
+code logs.txt
+code 203210.txt
+git add -A
+git commit -m "Final commit"
